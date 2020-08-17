@@ -1,0 +1,10 @@
+<mat-toolbar color="primary" id="navbar">
+  <span><img class="avatar" [src]="'assets/dog.jpg'"> </span>
+
+  <span class="fill-remaining-space"></span>
+
+  <mat-icon color="accent">nights_stay</mat-icon>
+  <mat-slide-toggle [checked]="isDarkTheme | async"
+    (change)="toggleDarkTheme($event.checked)"></mat-slide-toggle>
+
+</mat-toolbar>

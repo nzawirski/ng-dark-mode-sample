@@ -1,1 +1,6 @@
-<mat-card>This should render as mat-card</mat-card>
+<div [ngClass]="{'dark-theme': isDarkTheme | async}" id="origin">
+  <div class="mat-app-background">
+    <app-navbar></app-navbar>
+    <router-outlet></router-outlet>
+  </div>
+</div>

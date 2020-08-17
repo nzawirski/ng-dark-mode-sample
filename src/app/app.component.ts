@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Observable } from 'rxjs';
+import { ThemeService } from './services/theme.service';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +9,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'dark-mode-sample';
+  isDarkTheme: Observable<boolean>;
+
+  constructor(private themeService: ThemeService) { }
+  ngOnInit() {
+    this.isDarkTheme = this.themeService.isDarkTheme;
+  }
 }
